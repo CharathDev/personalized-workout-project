@@ -11,7 +11,7 @@ interface Exercise {
 type WorkoutData = Exercise[][];
 
 export default function Home() {
-  const goals = ["Build Muscle", "Lose Fat"];
+  const goals = ["Build Muscle", "Lose Fat", "Increase Strength"];
   const levels = ["Beginner", "Intermediate", "Advanced"];
   const all_days = [3, 4, 5, 6];
   const times = [45, 60, 90, 120];
@@ -114,16 +114,17 @@ export default function Home() {
               >
                 Goal
               </label>
-              <div className={`grid grid-cols-${goals.length} gap-2`}>
+              <div className={`grid grid-cols-3 m-auto`}>
                 {goals.map((current_goal, i) => (
-                  <div
-                    className={`${
-                      goal == current_goal ? "bg-rose-500" : "bg-neutral-800"
-                    }  hover:ring-2 hover:ring-rose-500 text-grey-300 p-5 rounded-md tooltip h-full flex justify-center items-center hover:cursor-pointer`}
-                    key={i}
-                    onClick={() => setGoal(current_goal)}
-                  >
-                    {current_goal}
+                  <div className="p-1" key={i}>
+                    <div
+                      className={`${
+                        goal == current_goal ? "bg-rose-500" : "bg-neutral-800"
+                      }  hover:ring-2 hover:ring-rose-500 text-grey-300 p-5 rounded-md tooltip h-full flex justify-center items-center hover:cursor-pointer`}
+                      onClick={() => setGoal(current_goal)}
+                    >
+                      {current_goal}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -135,16 +136,19 @@ export default function Home() {
               >
                 Level
               </label>
-              <div className={`grid grid-cols-${levels.length} gap-2`}>
+              <div className={`grid grid-cols-3 m-auto`}>
                 {levels.map((current_level, i) => (
-                  <div
-                    className={`${
-                      level == current_level ? "bg-rose-500" : "bg-neutral-800"
-                    }  hover:ring-2 hover:ring-rose-500 text-grey-300 p-5 rounded-md tooltip h-full flex justify-center items-center hover:cursor-pointer`}
-                    key={i}
-                    onClick={() => setLevel(current_level)}
-                  >
-                    {current_level}
+                  <div className="p-1" key={i}>
+                    <div
+                      className={`${
+                        level == current_level
+                          ? "bg-rose-500"
+                          : "bg-neutral-800"
+                      }  hover:ring-2 hover:ring-rose-500 text-grey-300 p-5 rounded-md tooltip h-full flex justify-center items-center hover:cursor-pointer`}
+                      onClick={() => setLevel(current_level)}
+                    >
+                      {current_level}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -156,16 +160,17 @@ export default function Home() {
               >
                 Days per Week
               </label>
-              <div className={`grid grid-cols-${all_days.length} gap-2`}>
+              <div className={`grid grid-cols-4 m-auto`}>
                 {all_days.map((current_days, i) => (
-                  <div
-                    className={`${
-                      days == current_days ? "bg-rose-500" : "bg-neutral-800"
-                    }  hover:ring-2 hover:ring-rose-500 text-grey-300 p-5 rounded-md tooltip h-full flex justify-center items-center hover:cursor-pointer`}
-                    key={i}
-                    onClick={() => setDays(current_days)}
-                  >
-                    {current_days}
+                  <div className="p-1" key={i}>
+                    <div
+                      className={`${
+                        days == current_days ? "bg-rose-500" : "bg-neutral-800"
+                      }  hover:ring-2 hover:ring-rose-500 text-grey-300 p-5 rounded-md tooltip flex justify-center items-center hover:cursor-pointer`}
+                      onClick={() => setDays(current_days)}
+                    >
+                      {current_days}
+                    </div>
                   </div>
                 ))}
               </div>
