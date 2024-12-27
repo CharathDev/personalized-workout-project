@@ -2,28 +2,11 @@
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Requirements](#requirements)
-4. [Setup and Installation](#setup-and-installation)
-5. [Dataset Format](#dataset-format)
-6. [Model Training](#model-training)
-7. [Generating Personalized Workouts](#generating-personalized-workouts)
-
----
-
-## Overview
-
-The Personalized Workout Generator is a machine learning project that creates customized workout plans based on user preferences. It uses a sequence-to-sequence model trained with neural networks to predict structured workout plans tailored to input features like goals, experience level, time, available equipment, and more.
-
----
-
-## Features
-
-- Generate structured, personalized multi-day workout plans.
-- Specify inputs such as fitness goals, level, days per week, session duration, equipment, and gender.
-- Utilize a tokenized and embedded neural network model for natural language generation.
-- Save and load trained tokenizers and models for reuse.
+1. [Requirements](#requirements)
+2. [Setup and Installation](#setup-and-installation)
+3. [Dataset Format](#dataset-format)
+4. [Model Training](#model-training)
+5. [Generating Personalized Workouts](#generating-personalized-workouts)
 
 ---
 
@@ -40,34 +23,27 @@ The Personalized Workout Generator is a machine learning project that creates cu
 
 ## Setup and Installation
 
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/CharathDev/personalized-workout-project.git
-   cd personalized-workout-project
-   ```
-
-2. **Create a Virtual Environment:**
+1. **Create a Virtual Environment:**
 
    ```bash
    python -m venv venv
    source venv/bin/activate   # On Windows: venv\Scripts\activate
    ```
 
-3. **Install Requirements:**
+2. **Install Requirements:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Start Jupyter Notebook**
+3. **Start Jupyter Notebook**
    Launch Jupyter Notebook to run the project interactively:
 
    ```bash
    jupyter notebook
    ```
 
-5. **Run the Scripts:**
+4. **Run the Scripts:**
    Go to server/model/src and run the following files in order
 
    1. Scraping.ipynb
